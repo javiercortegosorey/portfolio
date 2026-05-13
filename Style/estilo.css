@@ -1,0 +1,181 @@
+.site-wrapper {
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+}
+
+@charset "utf-8";
+@font-face {
+    font-family: 'Mango';
+    src: url('../Fonts/MangoGrotesque_Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvantBold';
+    src: url('../Fonts/AvantGarde_Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvantTexto';
+    src: url('../Fonts/AvantGarde_Book.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Todo el texto enlazado se convierte a verde al pasarle el ratón por encima. Gemini. */
+a {
+    color: #000000;
+    text-decoration: none;
+    transition: 0.3s;
+}
+a:hover {
+    color: #00ff00;
+}
+
+.encabezado {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+.logo {
+    font-family: 'Mango', sans-serif;
+    font-size: 5rem;
+}
+
+.nav-superior a {
+    margin-left: 20px;
+    font-family: 'AvantBold', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* La parte principal dividida en dos columnas. Gemini. */
+.principal {
+    display: flex; /* Esto hace que la foto y los proyectos se pongan uno al lado del otro */
+    flex: 1; /* Hace que esta fila crezca para ocupar el espacio central */
+    margin-top: 100px;
+}
+
+.col-foto {
+    flex: 1; /* Ocupa una parte */
+}
+
+.col-proyectos {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-bottom: 150px;
+}
+
+.proyecto-item {
+    font-family: 'Mango', sans-serif;
+    font-size: 4rem;
+    line-height: 0.8;
+    margin-bottom: 15px;
+}
+
+.pie-pagina {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+    font-family: 'AvantBold', sans-serif;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+}
+
+/* Todo el apartado siguiente está copiado y pegado de Gemini para pedirle que fuese responsive */
+@media screen and (max-width: 768px) {
+    .encabezado {
+        padding: 0 20px;
+        height: 80px; /* Un poco más bajo en móvil */
+    }
+    .logo {
+        font-size: 3rem; /* El logo Mango un poco más pequeño para que no coma pantalla */
+    }
+    .principal {
+        flex-direction: column; /* ¡MAGIA! La foto y la lista se ponen una debajo de otra */
+        margin-top: 90px;
+        align-items: center; /* Centramos todo */
+    }
+    .col-foto, .col-proyectos {
+        width: 100%;
+        text-align: center; /* Centramos los textos en móvil */
+    }
+    .col-foto {
+        margin-bottom: 40px; /* Separación entre tu foto y la lista de proyectos */
+    }
+    .nav-superior {
+        font-size: 1rem;
+    }
+}
+
+/* De aquí en adelante son estilos para las subpáginas */
+.principal-proyecto {
+    margin-top: 120px;
+    padding: 0 40px 100px 40px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-proyecto {
+    margin-bottom: 20px;
+}
+
+.titulo-proyecto {
+    font-family: 'Mango', sans-serif;
+    font-size: 4rem;
+    font-weight: normal;
+    margin-bottom: 0px;
+}
+
+.descripcion-proyecto {
+    font-family: 'AvantTexto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.galeria-fotos img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px; /* Espacio entre fotos del proyecto */
+    display: block;
+}
+
+.contenedor-video {
+    width: 100%;
+    margin: 40px auto; 
+    background-color: #000;
+    line-height: 0;
+}
+
+.contenedor-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+    outline: none;
+}
+
+.boton-descarga {
+    font-family: 'AvantBold', sans-serif;
+    color: #000;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
